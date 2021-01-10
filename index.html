@@ -6,9 +6,18 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Currency Converter</title>
-    <script src="index.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css" />
 </head>
 <body>
-
+    <form action="submit" id="convert-form">
+        <select name="form-currency" class="currency-selector" id="from-selector">
+        </select>
+        <input type="text" id="amount-input">
+        <select name="to-currency" class="currency-selector" id="to-selector">
+        </select>
+        <button>Convert</button>
+        <p id="result"></p>
+    </form>
+    <script src="index.js"></script>
 </body>
 </html>
