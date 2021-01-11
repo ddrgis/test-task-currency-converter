@@ -25,11 +25,11 @@ exports.flatten = function(arr) {
     }
 
     const result = [];
-    let array = [...arr];
-    while (array.length) {
-        const first = array.shift();
+    let queue = [...arr];
+    while (queue.length) {
+        const first = queue.shift();
         if (Array.isArray(first)) {
-            array = [...first, ...array];
+            queue = [...first, ...queue];
             continue;
         } else {
             result.push(first);
